@@ -1,0 +1,7 @@
+services:
+  jupyter:
+    image: jupyter/scipy-notebook
+    container_name: jupyter
+    ports:
+      - "8888:8888"
+    command: start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''

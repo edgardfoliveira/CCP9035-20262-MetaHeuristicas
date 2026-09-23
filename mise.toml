@@ -1,0 +1,5 @@
+[tools]
+python = "3.13.15"
+
+[settings.upgrade]
+auto_prune = false
