@@ -3,5 +3,13 @@ services:
     image: jupyter/scipy-notebook
     container_name: jupyter
     ports:
-      - "8888:8888"
+      - "8181:8888"
     command: start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''
+    deploy:
+      resources:
+        limits:
+          cpus: '2.5'      # max 0.5 CPU cores
+          memory: 2048M     # max 512 MB RAM
+        reservations:
+          cpus: '1.0'     # guaranteed minimum
+          memory: 512M
